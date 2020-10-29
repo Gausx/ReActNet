@@ -23,6 +23,8 @@ class BinaryActivation(nn.Module):
 
     def forward(self, x):
         out_forward = torch.sign(x)
+
+        # 地下部分为看懂  看着像是在重构反向传递  分段的构造
         #out_e1 = (x^2 + 2*x)
         #out_e2 = (-x^2 + 2*x)
         out_e_total = 0
